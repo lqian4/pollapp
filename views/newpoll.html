@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      
+
+      
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+   
+
+    <title>Signin</title>
+
+    <!-- Bootstrap core CSS -->
+     <link href="../public/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../public/css/layout.css" rel="stylesheet">
+  </head>
+
+  <body>
+<!-- saved from url=(0059)http://getbootstrap.com/docs/4.0/examples/narrow-jumbotron/ -->
+<html lang="en" class="gr__getbootstrap_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+    <title>Poll App</title>
+
+  
+  </head>
+
+  <body data-gr-c-s-loaded="true">
+
+    <div class="container">
+      <header class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills float-right">
+            
+            <li class="nav-item">
+              <a class="nav-link " href="/displayAll">My Polls<span class="sr-only"></span></a>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link active">New Poll<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="signin.html">Logout</a>
+            </li>
+          </ul>
+        </nav>
+        <h3 class="text-muted"><a href="dash.html">Hello , Long</a></h3>
+      </header>
+      </div>
+       <div class="container">
+<form action="/form" method="POST">
+      <div class="form-signin">
+        <h2 class="form-signin-heading">New Poll</h2>
+        <label for = "question" class="form-question-heading">Question</label>
+          
+        
+        <input type="text" class="poll-form" name="question" id="question">
+      <div class= "optiontainer">
+            <label for = "option" class="form-question-heading">Options:</label>
+        
+          
+              
+        </div>
+             
+          <div class="btncontainer">
+        <button type="button" id= "more" class="btn btn-lg btn-primary btn-block bg-green" >More option</button>
+          <button  class="btn btn-lg btn-primary btn-block" type="submit" value = "Submit">Submit</button>
+            </div>
+      </div>
+ </form>
+    </div>
+      
+    </body>
+     <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="sketch.js"></script>
+    
+          <script>
+              
+            
+             
+   $(document).ready(function(){
+       
+        var counter = 2;
+              for(var i =0; i < counter; i++){
+                  
+                  var curString = '<input type="text"  class="poll-option" name="option' + i + '" id = "option' + i + '">';
+                  
+                  $('.optiontainer').append(curString);
+              }
+       
+      $("#more").click(function() {
+          
+           var curString = '<input type="text"  class="poll-option" name="option' + counter + '" id = "option' + counter + '">';
+
+  $('.optiontainer').append(curString);
+          counter++;
+
+}); 
+   });
+
+    </script>
+    
+    
+    </html>
